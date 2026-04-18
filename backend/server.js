@@ -48,6 +48,9 @@ async function seedAdmin() {
   }
 }
 
+// Root route
+app.get('/', (req, res) => res.json({ msg: 'Fitness Tracker API is running' }));
+
 // Health check
 app.get('/api/health', (req, res) => res.json({ status: 'ok' }));
 
